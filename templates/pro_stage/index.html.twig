@@ -5,50 +5,26 @@
 <h1>Bienvenue sur la page d'accueil de ProStage </h1>
 
 <div class="row" style="margin-top:20px;">
-		<div class="col-md-3 col-sm-6">
+		{% for stageCourant in stages %}
+		<div class="row">
+		<div class="col-md-12">
 			<h2>
-				Stage 1
+				Titre du stage : {{stageCourant.titre}} 
 			</h2>
+			<br/>
 			<p>
-				Franchement, ce stage est pas top
+				Voici le détail du stage : {{stageCourant.description}}
 			</p>
+			<br/>
 			<p>
-				<a class="btn" href="stages/1">Stage 1</a>
+				<a class="btn" href="stages/{{stageCourant.id}}"> Plus d'informations</a>
 			</p>
+			<br/>
 		</div>
-		<div class="col-md-3 col-sm-6">
-			<h2>
-				Stage 2
-			</h2>
-			<p>
-				Franchement, ce stage est pas top
-			</p>
-			<p>
-				<a class="btn" href="stages/2">Stage 2</a>
-			</p>
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<h2>
-				Stage 3
-			</h2>
-			<p>
-				Postule pour celui là frero
-			</p>
-			<p>
-				<a class="btn" href="stages/3">Stage 3</a>
-			</p>
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<h2>
-				Stage 4
-			</h2>
-			<p>
-				Franchement, ce stage est pas top
-			</p>
-			<p>
-				<a class="btn" href="stages/4">Stage 4</a>
-			</p>
-		</div>
-		</div>
+	</div>
+	
+</div>
+<br/>
+	{% endfor %}
         </div>
 {% endblock %}

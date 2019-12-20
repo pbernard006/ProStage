@@ -49,6 +49,7 @@ class AppFixtures extends Fixture
             $stage->setDescription($faker->sentence($nbWords = 15, $variableNbWords = true));
             $stage->setEmail($faker->email);
             $stage->addLaFormation($formation);
+            $stage->setLaEntreprise($entreprise);
             
             $manager->persist($stage);
 

@@ -4,53 +4,22 @@
 {% block contenu %}
 <h1>Bienvenue sur la page d'accueil de ProStage </h1>
 
-{#<div class="row" style="margin-top:20px;">#}
+
 <div class="container-fluid">
 			<div class="row">
+			{% for stageCourant in stages %}
 		<div class="col-md-3 col-sm-6">
 			<h2>
-				Stage 
+				{{stageCourant.titre}}  
 			</h2>
 			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+				Détails : {{stageCourant.description}}
 			</p>
 			<p>
-				<a class="btn" href="stages/1">View details »</a>
+				<a class="btn" href="stages/{{stageCourant.id}}">View details »</a>
 			</p>
 		</div>
-		<div class="col-md-3 col-sm-6">
-			<h2>
-				Stage 
-			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				<a class="btn" href="stages/1">View details »</a>
-			</p>
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<h2>
-				Stage 
-			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				<a class="btn" href="stages/1">View details »</a>
-			</p>
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<h2>
-				Stage 
-			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				<a class="btn" href="stages/1">View details »</a>
-			</p>
-		</div>
-	</div>
+		
+	{% endfor %}
         </div>
 {% endblock %}

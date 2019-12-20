@@ -4,27 +4,53 @@
 {% block contenu %}
 <h1>Bienvenue sur la page d'accueil de ProStage </h1>
 
-<div class="row" style="margin-top:20px;">
-		{% for stageCourant in stages %}
-		<div class="row">
-		<div class="col-md-12">
+{#<div class="row" style="margin-top:20px;">#}
+<div class="container-fluid">
+			<div class="row">
+		<div class="col-md-3 col-sm-6">
 			<h2>
-				Titre du stage : {{stageCourant.titre}} 
+				Stage 
 			</h2>
-			<br/>
 			<p>
-				Voici le détail du stage : {{stageCourant.description}}
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
 			</p>
-			<br/>
 			<p>
-				<a class="btn" href="stages/{{stageCourant.id}}"> Plus d'informations</a>
+				<a class="btn" href="stages/1">View details »</a>
 			</p>
-			<br/>
+		</div>
+		<div class="col-md-3 col-sm-6">
+			<h2>
+				Stage 
+			</h2>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+			</p>
+			<p>
+				<a class="btn" href="stages/1">View details »</a>
+			</p>
+		</div>
+		<div class="col-md-3 col-sm-6">
+			<h2>
+				Stage 
+			</h2>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+			</p>
+			<p>
+				<a class="btn" href="stages/1">View details »</a>
+			</p>
+		</div>
+		<div class="col-md-3 col-sm-6">
+			<h2>
+				Stage 
+			</h2>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+			</p>
+			<p>
+				<a class="btn" href="stages/1">View details »</a>
+			</p>
 		</div>
 	</div>
-	
-</div>
-<br/>
-	{% endfor %}
         </div>
 {% endblock %}
